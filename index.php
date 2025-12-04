@@ -8,6 +8,7 @@ Ceci se passe de commentaire.
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
  <meta http-equiv="Content-Language" content="fr" />
  <meta name="author" content="Marc Glisse" />
+ <link rel="stylesheet" type="text/css" href="styles.css">
  <title>
   SlamBlog
  </title>
@@ -40,6 +41,8 @@ Sed tempus in libero at convallis. Fusce eget massa at neque laoreet vulputate. 
 Pellentesque id ligula vitae nulla vehicula scelerisque. Etiam magna libero, feugiat vitae nulla in, faucibus euismod odio. Nam ullamcorper non turpis at cursus. Fusce commodo, felis vel pulvinar pulvinar, risus purus mattis nisl, et venenatis erat lacus nec dolor. Integer sit amet fermentum eros. Aliquam tincidunt, arcu sed feugiat pellentesque, urna orci faucibus purus, at lobortis velit est et ante. Pellentesque eget neque eu felis interdum tincidunt ut ac ipsum. Vestibulum id nibh aliquet, dictum mi nec, malesuada elit. Donec non pulvinar ante, non imperdiet risus. Sed malesuada rhoncus vestibulum. Ut eleifend leo orci, sit amet ornare massa ultricies ut. Nunc nec eros eget libero scelerisque posuere ac sit amet ante. Vivamus enim turpis, ultrices quis leo at, blandit placerat risus. Morbi congue dui quis lorem molestie congue. Cras iaculis nulla nec tellus semper accumsan. Nunc laoreet ullamcorper vulputate.
 </p>
 <hr />
+
+<button class="button-80s">CLIQUEZ ICI</button>
 
 <p>
 footer
