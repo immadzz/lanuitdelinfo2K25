@@ -14,7 +14,7 @@ Ceci se passe de commentaire.
 </head>
 <body>
 <p>
-Allez dans <code>Fichier&rarr;Enregistrer sous</code>, pour t&eacute;l&eacute;charger ce fichier.
+Allez dans <code>Fichier&rarr;Enregistrer sous</code>, pour t&eacute;l&eacute;charger ce fichier
 </p>
 <hr />
 </body>
