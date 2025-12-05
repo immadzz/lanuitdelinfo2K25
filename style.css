@@ -1,0 +1,342 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: purple;
+    background-image: url('img/fond.png');
+}
+
+#gauche {
+    float: left;
+    width: 24%;
+    background-color: green;
+    box-sizing: border-box;
+    padding: 10px;
+    margin : 5px;
+}
+
+#milieu {
+    float: left;
+    width: 50%;
+    background-color: cyan;
+    box-sizing: border-box;
+    padding: 10px;
+    margin : 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+
+}
+
+#droite {
+    float: right;
+    width: 23%;
+    background-color: red;
+    box-sizing: border-box;
+    padding: 10px;
+    margin : 5px;
+
+}
+
+
+
+/* Nettoyer les floats après les colonnes */
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+hr {
+    clear: both; /* Assure que la ligne horizontale s'affiche sous les colonnes */
+}
+
+.container {
+    margin-left: 250px;
+    margin-right: 250px;
+    background-color: palevioletred;
+}
+
+#footer {
+    text-align: center;
+    background-color: #FFD1DC;
+    margin: 0; /* Supprime les marges par défaut de <p> */
+    padding: 10px 0; /* Ajoute un peu d'espace vertical */
+    width: 100%; /* Prend toute la largeur disponible */
+    position: relative; /* Positionnement relatif pour le contrôle */
+    left: 0; /* Aligne à gauche de la page */
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
+    font-family: 'Retro Gaming', Arial, sans-serif !important;
+    font-size: 16px;
+}
+
+
+
+
+
+
+/* BANNIERE */
+@font-face {
+    font-family: 'Retro Gaming';
+    src: url('banniere/Retro\ Gaming.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+button {
+    font-family: 'Retro Gaming', Arial, sans-serif !important;
+    font-size: 16px;
+}
+
+#banniere {
+    background-color: #FFD1DC;
+    height: 150px;
+    font-family: 'Retro Gaming', Arial, sans-serif !important;
+    font-size: 16px;
+}
+
+#main-title {
+    margin-top: 8px;
+    color: #FFFFE0;
+    text-align: center;
+    font-family: 'Retro Gaming', Arial, sans-serif !important;
+    font-size: 40px;
+}
+
+#titres {
+    margin-top: 8px;
+    color: yellow;
+    text-align: center;
+    font-family: 'Retro Gaming', Arial, sans-serif !important;
+    font-size: 40px;
+}
+.slamblog-text {
+    color: #FF00FF; /* Couleur pour "SLAMBLOG.fr" */
+}
+
+.button-80s-blue {
+    background-color: blue;
+    border-style: groove;
+    border-color: white;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-family: 'Retro Gaming', Arial, sans-serif !important;
+}
+
+.button-80s-red {
+    background-color: #eb3b5a;
+    border-style: groove;
+    border-color: white;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-family: 'Retro Gaming', Arial, sans-serif !important;
+}
+
+.button-80s-green {
+    background-color: #98FF98;
+    border-style: groove;
+    border-color: white;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-family: 'Retro Gaming', Arial, sans-serif !important;
+}
+
+.button-80s-jaune {
+    background-color: #fed330;
+    border-style: groove;
+    border-color: white;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-family: 'Retro Gaming', Arial, sans-serif !important;
+}
+
+li {
+    display: inline;
+    margin-left: 18.5%;
+}
+
+
+#putaclicgauche{
+    background-color: red;
+    color: white;
+}
+
+#putaclicdroite { 
+    background-color: yellow;
+    color: black;
+}
+
+#flyer{
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Style pour la discussion */
+.discussion {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    max-width: 70%;
+}
+
+.left {
+    float: left;
+    clear: left;
+    background-color: #e3f2fd;
+    text-align: left;
+}
+
+.right {
+    float: right;
+    clear: right;
+    background-color: #e8f5e9;
+    text-align: right;
+}
+
+ul {
+    margin: 10px 0 10px 20px;
+    padding: 0;
+}
+
+
+.faq-section {
+    margin: 30px auto;
+    padding: 25px;
+    border: 5px solid #ff00ff;
+    background-color: #ffff00;
+    font-family: "Comic Sans MS", "Arial Rounded MT Bold", cursive;
+    max-width: 900px;
+}
+
+.faq-header {
+    background-color: #ff0000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    border: 5px solid;
+    border-color: #0000ff #0000ff #ffff00 #0000ff;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+.faq-header:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: -5px;
+    bottom: -5px;
+    background-color: #000000;
+    z-index: -1;
+}
+
+.faq-section h2 {
+    color: #ff0066;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+    background-color: #ccffcc;
+    padding: 15px;
+    border: 3px dashed #ff00ff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 2px solid #00ff00;
+    border-left: 8px solid #ffff00;
+    position: relative;
+}
+
+.faq-item-odd {
+    background-color: #f0f8ff;
+    border-left-color: #ff00ff;
+}
+
+.faq-item-even {
+    background-color: #fff0f5;
+    border-left-color: #00ccff;
+}
+
+
+
+
+.faq-question {
+    font-weight: bold;
+    color: #0000ff;
+    margin-bottom: 8px;
+    font-size: 16px;
+    background-color: #e6f7ff;
+    padding: 8px;
+    border: 1px dotted #00aaff;
+    margin-left: 20px; 
+}
+
+.faq-question strong {
+    background-color: #ffff00;
+    padding: 2px 5px;
+}
+
+.faq-answer {
+    color: #333333;
+    margin-left: 30px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ffcc00;
+    line-height: 1.6;
+}
+
+.faq-answer:before {
+    content: "► ";
+    color: #ff00ff;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+
+.timeline-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.timeline-table th {
+    background-color: #ffccff;
+    color: #000;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.timeline-table td {
+    padding: 8px;
+    border: 1px solid black;
+    vertical-align: top;
+}
+
+.timeline-table tr:nth-child(even) {
+    background-color:cyan;
+}
+
+.timeline-table tr:nth-child(odd) {
+    background-color:#00aaff;
+}
+

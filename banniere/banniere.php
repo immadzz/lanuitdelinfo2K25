@@ -3,28 +3,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bannière</title>
-        <link rel="stylesheet" href="banniere.css">
+        <link rel="stylesheet" href="../style.css">
     </head>
     <body>
         <div id="banniere">
-            <h1 id="main-title">Bienvenue sur SLAMBLOG</h1>
+            <h1 id="main-title">Bienvenue sur <span class="slamblog-text">SLAMBLOG.fr</span></h1>
             
             <ul>
             <li>
-                <button class="button-80s-blue">CLIQUEZ ICI</button>
+                <a href="index.php#forum"><button class="button-80s-blue">PREZ</button></a>
             </li>
 
             <li>
-                <button class="button-80s-green">CLIQUEZ ICI</button>
+                <a href="index.php#timeline"><button class="button-80s-green">KI ON EST</button></a>
             </li>
 
             <li>
-                <button class="button-80s-jaune">CLIQUEZ ICI</button>
+                <a href="index.php#faq"><button class="button-80s-jaune">FAQ</button></a>
             </li>
 
-            <li>
-                <button class="button-80s-red">CLIQUEZ ICI</button>
-            </li>
             </ul>
         </div>
 
