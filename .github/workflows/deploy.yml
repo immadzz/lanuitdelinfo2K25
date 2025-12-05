@@ -27,16 +27,24 @@ jobs:
 
             cd /var/www
 
-            # Si le dossier n'existe pas ou n'est pas un dépôt Git, on le recrée
+            # Si le dossier n'existe pas, on clone à neuf
             if [ ! -d "lanuitdelinfo2K25/.git" ]; then
               echo "🔄 Clonage initial du dépôt..."
               sudo rm -rf lanuitdelinfo2K25
-              git clone https://github.com/${{ github.repository }}.git
+              git clone https://github.com/${{ github.repository }}.git lanuitdelinfo2K25
               cd lanuitdelinfo2K25
             else
               echo "🚀 Mise à jour du dépôt existant..."
               cd lanuitdelinfo2K25
-              git fetch origin
+
+              # Si le remote origin n'existe pas ou est vide, on le recrée
+              if ! git remote get-url origin > /dev/null 2>&1; then
+                echo "⚙️ Aucun remote trouvé, on le recrée..."
+                git remote add origin https://github.com/${{ github.repository }}.git
+              fi
+
+              # Synchronisation forcée depuis la branche main
+              git fetch origin main
               git reset --hard origin/main
             fi
 
