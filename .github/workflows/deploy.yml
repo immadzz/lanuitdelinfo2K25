@@ -1,41 +1,50 @@
-name: Deploy to Proxmox CT109
+name: 🚀 Deploy to Server
 
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:
+    branches:
+      - main  # Déploiement automatique à chaque push sur la branche main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: 🧭 Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Deploy to server
-        uses: appleboy/ssh-action@master
+      - name: 🚀 Deploy via SSH
+        uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
           timeout: 60s
           command_timeout: 30m
           script: |
-            cd /var/www/lanuitdelinfo2K25
-            
+            echo "===== 📦 DÉBUT DU DÉPLOIEMENT ====="
+
+            cd /var/www
+
+            # Si le dossier n'existe pas ou n'est pas un dépôt Git, on le recrée
+            if [ ! -d "lanuitdelinfo2K25/.git" ]; then
+              echo "🔄 Clonage initial du dépôt..."
+              sudo rm -rf lanuitdelinfo2K25
+              git clone https://github.com/immadzz/lanuitdelinfo2K25.git
+              cd lanuitdelinfo2K25
+            else
+              echo "🚀 Mise à jour du dépôt existant..."
+              cd lanuitdelinfo2K25
+              git fetch origin
+              git reset --hard origin/main
+            fi
+
             # Correction Git "dubious ownership"
             git config --global --add safe.directory /var/www/lanuitdelinfo2K25
-            
-            # Premier déploiement : clone le repo si nécessaire
-            if [ ! -d ".git" ]; then
-              git clone https://github.com/${{ github.repository }}.git .
-            fi
-            
-            # Déploiements suivants : mise à jour forcée depuis main
-            git fetch origin
-            git reset --hard origin/main
-            
+
             # Correction des permissions
+            echo "🔧 Correction des permissions..."
             sudo chown -R www-data:www-data /var/www/lanuitdelinfo2K25
+
+            echo "✅ Déploiement terminé avec succès."
