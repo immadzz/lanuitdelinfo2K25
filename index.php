@@ -5,10 +5,14 @@
     <meta http-equiv="Content-Language" content="fr" />
     <meta name="author" content="Marc Glisse" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="../snake/test.css">
+
+    
     <title>SlamBlog</title>
 </head>
 <body>
    <?php require_once('banniere/banniere.php'); ?>
+
     <div class="container">
         <hr />
         <div id="gauche" style="background-color: green; color: white; padding: 10px; font-family: Arial, sans-serif;">
@@ -41,7 +45,7 @@
             </p>
 
             
-            <img src="img/BIEBER.png" width="325" alt="Bieber" style="display: block; margin: 0 auto;"/>
+            <img src="img/bieber.jpg" width="325" alt="Bieber" style="display: block; margin: 0 auto;"/>
 
             <p style="text-align: center; font-weight: bold;">
                 💖 L'IDOLE DES NANAS EST DE RETOUR ! 💖
@@ -146,15 +150,21 @@
                 </div>
             </div>
             <img id="flyer" src="img/flyer.png" width="500" alt="Flyer" />
-            <iframe
-                width="660"
-                height="415"
-                src="https://www.youtube.com/embed/Bvs2H0Krn3Y?si=eTibIXW_er_CX8bf"
-                frameborder="0"
-                allowfullscreen>
-                Votre navigateur ne supporte pas les iframes.
-            </iframe>
+            <strong><p><u id="putaclicgauche"> Voici le flyer pour le défi de la place des femmes </u></p>
+         <iframe
+            width="660"
+            height="415"
+            src="https://www.youtube.com/embed/z3994Ve9qYQ"
+            frameborder="0"
+            allowfullscreen>
+            Votre navigateur ne supporte pas les iframes.
+         </iframe>
+            <strong><p><u id="putaclicgauche"> Voici la vidéo pour le défi de la place des femmes </u></p>
+         
+
         </div>
+
+
         <div id="droite" style="background-color: red; color: white; padding: 10px; font-family: Arial, sans-serif;">
             <h3 style="text-align: center; color: yellow;"> ANGRY BIRDS : LE JEU QUI DÉCHIRE ! </h3>
             <img src="img/angrybirdd.jpg" width="400" alt="Angry Birds" style="display: block; margin: 0 auto; border: 3px solid yellow;"/>
@@ -196,7 +206,12 @@
             <img src="img/looping.png" width="400" alt="Looping" style="display: block; margin: 0 auto;"/>
             <br>
             <br>
-            <strong><u id="putaclicdroite">LA SUITE DES NEWS LA SEMAINE PRO</u></strong>            
+
+               <a href="snake/snake.html"><img id="gameboy" src="snake/gameboyOff.png" alt="Gameboy Off" width="350" height="350"></a>
+
+            <strong><u id="putaclicdroite">LA SUITE DES NEWS LA SEMAINE PRO</u></strong>  
+            
+
          </div>
         <hr />
     </div>
