@@ -1,0 +1,41 @@
+name: Deploy to Proxmox CT109
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          timeout: 60s
+          command_timeout: 30m
+          script: |
+            cd /var/www/lanuitdelinfo2K25
+            
+            # Correction Git "dubious ownership"
+            git config --global --add safe.directory /var/www/lanuitdelinfo2K25
+            
+            # Premier déploiement : clone le repo si nécessaire
+            if [ ! -d ".git" ]; then
+              git clone https://github.com/${{ github.repository }}.git .
+            fi
+            
+            # Déploiements suivants : mise à jour forcée depuis main
+            git fetch origin
+            git reset --hard origin/main
+            
+            # Correction des permissions
+            sudo chown -R www-data:www-data /var/www/lanuitdelinfo2K25
